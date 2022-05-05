@@ -1,0 +1,31 @@
+{
+    "name": "vrun.design",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "svelte-kit dev --host",
+        "build": "svelte-kit build --verbose",
+        "postbuild": "svelte-sitemap --domain https://vrun.design; mv build/404/index.html build/404.html && echo 'moved 404.html to root'",
+        "preview": "svelte-kit preview",
+        "lint": "prettier --check . && eslint --ignore-path .gitignore .",
+        "format": "prettier --write ."
+    },
+
+    "devDependencies": {
+        "@sveltejs/adapter-static": "^1.0.0-next.7",
+        "@sveltejs/kit": "^1.0.0-next.109",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-svelte3": "^3.2.0",
+        "prettier": "~2.3.2",
+        "prettier-plugin-svelte": "^2.4.0",
+        "svelte": "^3.42.4",
+        "svelte-sitemap": "^2.0.1"
+    },
+
+    "type": "module",
+    "dependencies": {
+        "svelte-intl-precompile": "^0.3.3",
+        "svelte-swipe": "^1.8.2"
+    }
+}

@@ -1,0 +1,110 @@
+                            html {
+                                box-sizing: border-box;
+                                -webkit-font-smoothing: antialiased;
+                                -moz-osx-font-smoothing: grayscale;
+                            }
+                            
+                            body {
+                                width: 100vw;
+                                overflow-x: hidden;
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            
+                            @font-face {
+                                font-family: ElefantDisplay;
+                                src: url('/static/fonts/ElefantDisplay_2.otf') format('opentype');
+                            }
+                            
+                            @font-face {
+                                font-family: Futura-bold;
+                                src: url('/static/fonts/futura-pt-cond-bold-oblique.otf') format('opentype');
+                            }
+                            
+                            @font-face {
+                                font-family: Futura-light;
+                                src: url('/static/fonts/futura-pt-light.otf') format('opentype');
+                            }
+                            
+                            @font-face {
+                                font-family: PPNueueMachina-light;
+                                src: url('/static/fonts/PPNeueMachina-Light.otf') format('opentype');
+                            }
+                            
+                            @font-face {
+                                font-family: PPNueueMachina-regular;
+                                src: url('/static/fonts/PPNeueMachina-Regular.otf') format('opentype');
+                            }
+                            
+                            @font-face {
+                                font-family: PPNueueMachina-ultra;
+                                src: url('/static/fonts/PPNeueMachina-Ultrabold.otf') format('opentype');
+                            }
+                            
+                            *,
+                            *::before,
+                            *::after {
+                                box-sizing: inherit;
+                            }
+                            
+                            .grid-area {
+                                pointer-events: none;
+                                transform-style: preserve-3d;
+                            }
+                            
+                            p {
+                                background: -webkit-linear-gradient(#eee, #111);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                /* font-size: clamp(28px, 3.5vw, 44px); */
+                                font-size: 1.3em;
+                                letter-spacing: -0.20px;
+                                /* padding: clamp(20px, 2.8vw, 30px) 10px; */
+                                /* padding-right: 10px; */
+                                font-family: Futura-bold;
+                            }
+                            
+                            hr {
+                                border: none;
+                                height: 1px;
+                                color: #fefefe;
+                                background-color: #fefefe;
+                            }
+                            
+                            a {
+                                color: #151515;
+                            }
+                            
+                            .outside-link {
+                                display: block;
+                                margin-top: 20px;
+                                margin-left: 4px;
+                                font-size: 13px;
+                                line-height: 17.5px;
+                                letter-spacing: 0.11px;
+                                text-decoration: none;
+                                text-align: start;
+                            }
+                            
+                            .sticky-image {
+                                position: sticky;
+                                top: 0px;
+                                height: 120%;
+                            }
+                            
+                            .lower-container {
+                                transform: translateZ(500px);
+                            }
+                            /* Hide scrollbar for Chrome, Safari and Opera */
+                            
+                            *::-webkit-scrollbar {
+                                display: none;
+                            }
+                            /* Hide scrollbar for IE, Edge and Firefox */
+                            
+                            * {
+                                -ms-overflow-style: none;
+                                /* IE and Edge */
+                                scrollbar-width: none;
+                                /* Firefox */
+                            }

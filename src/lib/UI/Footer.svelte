@@ -5,3 +5,10 @@
 	import FooterLanguageWindow from '$lib/Windows/FooterWindows/FooterLanguageWindow.svelte';
 	import FooterPrivacyWindow from '$lib/Windows/FooterWindows/FooterPrivacyWindow.svelte';
 	import FooterLegalWindow from '$lib/Windows/FooterWindows/FooterLegalWindow.svelte';
+	export let currentPage;
+	let display = 'overview';
+	$: currentPage, (() => (display = 'overview'))();
+	function toggleWindow(name) {
+		display = display === name ? 'overview' : name;
+	}
+</script>

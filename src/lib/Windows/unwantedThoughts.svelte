@@ -17,7 +17,7 @@
 			<SwipeItem
 				><div class="container">
 					<div>
-						<img src="https://res.cloudinary.com/vrun/image/upload/q_auto/v1642927888/everydays/8_noxbjp.jpg" />
+						<img src="https://res.cloudinary.com/vrun/image/upload/q_auto/v1642927888/everydays/8_noxbjp.jpg" alt="unwantedThoughts" />
 					</div>
 					<div class="container "><h1>Knife talk</h1></div>
 				</div>
@@ -25,7 +25,7 @@
 			<SwipeItem
 				><div class="container">
 					<div>
-						<img src="https://res.cloudinary.com/vrun/image/upload/q_auto/v1642927959/everydays/one_man_can_change_the_world_4_sgepoq.jpg" />
+						<img src="https://res.cloudinary.com/vrun/image/upload/q_auto/v1642927959/everydays/one_man_can_change_the_world_4_sgepoq.jpg" alt="unwantedThoughts" />
 					</div>
 					<div class="container ">
 						<h1>One man can change the world</h1>
@@ -37,6 +37,9 @@
 </div>
 
 <style>
+	img {
+		max-width: 100%;
+	}
 	div {
 		grid-column: 70/85;
 		grid-row: 42/62;
@@ -57,9 +60,9 @@
 		justify-items: center;
 		align-items: end;
 	}
-	.gradient {
+	/* .gradient {
 		background: linear-gradient(transparent, black);
-	}
+	} */
 
 	p {
 		font-family: PPNueueMachina-regular;
@@ -119,7 +122,7 @@
 		}
 	}
 
-	@media (hover: hover) {
+	/* @media (hover: hover) {
 		p {
 			animation: none;
 			transition: 0.8s cubic-bezier(0.83, 0, 0.15, 1);
@@ -135,10 +138,7 @@
 		width: 100%;
 	}
 
-	img {
-		max-width: 100%;
-	}
 	video {
 		max-width: 100%;
-	}
+	} */
 </style>

@@ -1,6 +1,8 @@
-<section>
-	<p>Sorry buddy, must be something wrong, try refreshing or maybe come later?</p>
-</section>
+<div>
+	<section>
+		<p>Sorry buddy, must be something wrong, try refreshing or maybe come later?</p>
+	</section>
+</div>
 
 <style>
 	div {

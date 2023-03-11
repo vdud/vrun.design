@@ -33,12 +33,14 @@
         body {
             background-color: #ECF0F3;
         }
-    </style>
-    %svelte.head%
+    </style>		
+
+    %sveltekit.head%
+
 </head>
 
-<body id="svelte">
-    %svelte.body%
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
 </body>
 
 </html>

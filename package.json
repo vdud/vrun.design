@@ -1,31 +1,57 @@
 {
-    "name": "vrun.design",
-    "version": "1.0.0",
-    "scripts": {
-        "dev": "svelte-kit dev --host",
-        "build": "svelte-kit build --verbose",
-        "postbuild": "svelte-sitemap --domain https://vrun.design; mv build/404/index.html build/404.html && echo 'moved 404.html to root'",
-        "preview": "svelte-kit preview",
-        "lint": "prettier --check . && eslint --ignore-path .gitignore .",
-        "format": "prettier --write ."
-    },
-
-    "devDependencies": {
-        "@sveltejs/adapter-static": "^1.0.0-next.7",
-        "@sveltejs/kit": "^1.0.0-next.109",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.32.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-svelte3": "^3.2.0",
-        "prettier": "~2.3.2",
-        "prettier-plugin-svelte": "^2.4.0",
-        "svelte": "^3.42.4",
-        "svelte-sitemap": "^2.0.1"
-    },
-
-    "type": "module",
-    "dependencies": {
-        "svelte-intl-precompile": "^0.3.3",
-        "svelte-swipe": "^1.8.2"
+  "name": "vrun.design",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && npm run package",
+    "preview": "vite preview",
+    "package": "svelte-kit sync && svelte-package && publint",
+    "prepublishOnly": "npm run package",
+    "test": "playwright test",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test:unit": "vitest",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
     }
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "svelte": "^3.54.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/adapter-vercel": "^2.0.4",
+    "@sveltejs/kit": "^1.5.0",
+    "@sveltejs/package": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.8.1",
+    "publint": "^0.1.9",
+    "svelte": "^3.54.0",
+    "svelte-check": "^3.0.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vitest": "^0.25.3"
+  },
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "dependencies": {
+    "precompile-intl-runtime": "^0.8.2",
+    "svelte-swipe": "^1.9.2"
+  }
 }

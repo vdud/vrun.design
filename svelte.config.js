@@ -1,14 +1,18 @@
-import adapterStatic from "@sveltejs/adapter-static";
-import precompileIntl from "svelte-intl-precompile/sveltekit-plugin.js";
+import adapter from '@sveltejs/adapter-vercel'
+import { vitePreprocess } from '@sveltejs/kit/vite'
 
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-    kit: {
-        adapter: adapterStatic(),
-        target: "#svelte",
-        vite: {
-            plugins: [precompileIntl("locales")],
-        },
-    },
-};
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
 
-export default config;
+	kit: {
+		adapter: adapter(),
+		alias: {
+			$db: './src/db',
+		},
+	},
+}
+
+export default config

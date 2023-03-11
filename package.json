@@ -39,7 +39,6 @@
 		"vitest": "^0.25.3"
 	},
 	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
 		"precompile-intl-runtime": "^0.8.2",

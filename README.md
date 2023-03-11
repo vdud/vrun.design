@@ -7,4 +7,6 @@ I really like designs, arts so I always try to mix it with some code to make it 
 
 ### Code is also like magic
 
-- you just got to understand how its done, then you can also be a magician. \*
+_you just got to understand how its done, then you can also be a magician._
+
+## also here's the website link: [`vrun.design`](https://vrun-design.vercel.app/)
